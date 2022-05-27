@@ -1,7 +1,12 @@
-require 'lebeef.lib'
-require 'lebeef.packages'
-require 'lebeef.lsp'
-require 'lebeef.telescope'
+require 'modules.lib'
+require 'modules.packages'
+require 'modules.lsp'
+require 'modules.kb'
+require 'modules.nerdtree'
+require 'modules.tree-sitter'
+require 'modules.windline'
+require 'modules.fzf'
+
 
 local set = vim.opt  -- to set options
 local wo = vim.wo
@@ -14,7 +19,7 @@ local o = vim.o
 
 vim.cmd([[
 
-let g:seoul256_background = 233 
+let g:seoul256_background = 237 
 colo seoul256
 
 ]])
@@ -59,7 +64,7 @@ set.isfname:append('@-@')
 set.swapfile = false 
 set.backup = false 
 set.undofile = true
-set.undodir = '/Users/lebeef/.vim/undodir'
+set.undodir = '$HOME/.vim/undodir'
 set.clipboard = 'unnamedplus'
 
 -- Windows

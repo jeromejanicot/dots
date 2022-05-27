@@ -104,20 +104,10 @@ _G.packer_plugins = {
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  melange = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/melange",
-    url = "https://github.com/savq/melange"
-  },
   nerdtree = {
     loaded = true,
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
-  },
-  ["nord-vim"] = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -139,16 +129,6 @@ _G.packer_plugins = {
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["seoul256.vim"] = {
     loaded = true,
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/seoul256.vim",
@@ -159,20 +139,15 @@ _G.packer_plugins = {
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
     url = "https://github.com/simrat39/symbols-outline.nvim"
   },
-  ["telescope-fzy-native.nvim"] = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
-    url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
-  },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["windline.nvim"] = {
     loaded = true,
