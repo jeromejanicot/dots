@@ -37,6 +37,9 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
     use 'preservim/nerdtree'
     use 'ryanoasis/vim-devicons'
 
+    -- QoL
+    use 'tpope/vim-surround'
+
     -- Statusline
     use 'windwp/windline.nvim'
 

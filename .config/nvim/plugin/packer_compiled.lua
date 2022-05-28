@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["windline.nvim"] = {
     loaded = true,
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/windline.nvim",
