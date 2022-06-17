@@ -21,6 +21,7 @@ fi
 source $ZPLUG_HOME/init.zsh
 
 
+
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
@@ -49,8 +50,13 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-source /opt/local/share/fzf/shell/key-bindings.zsh
-source /opt/local/share/fzf/shell/completion.zsh
+if [[ 'uname -a | rg -iq "ubuntu"' ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+else
+    source /opt/local/share/fzf/shell/key-bindings.zsh
+    source /opt/local/share/fzf/shell/completion.zsh
+fi
 
 #
 # NVM 
