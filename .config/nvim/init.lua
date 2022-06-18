@@ -18,10 +18,7 @@ local o = vim.o
 --
 
 vim.cmd([[
-
-let g:seoul256_background = 237 
-colo seoul256
-
+colorscheme nord
 ]])
 
 

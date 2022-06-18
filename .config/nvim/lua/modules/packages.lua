@@ -30,8 +30,8 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
     use 'ThePrimeagen/git-worktree.nvim'
 
     -- FZF
-    use 'junegunn/fzf.vim'
     use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
 
     -- Files
     use 'preservim/nerdtree'
@@ -46,6 +46,9 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
     -- Themes
     use 'folke/tokyonight.nvim'
     use 'junegunn/seoul256.vim'
+    use 'sainnhe/everforest'
+    use 'NLKNguyen/papercolor-theme'
+    use 'arcticicestudio/nord-vim'
 
     if packer_bootstrap then
       require('packer').sync()
