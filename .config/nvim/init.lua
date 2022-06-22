@@ -61,7 +61,7 @@ set.isfname:append('@-@')
 set.swapfile = false 
 set.backup = false 
 set.undofile = true
-set.undodir = '.vim/undodir'
+set.undodir = '$HOME/.vim/undodir'
 set.clipboard = 'unnamedplus'
 
 -- Windows

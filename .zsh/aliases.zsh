@@ -1,3 +1,5 @@
+export EDITOR=/home/lebeef/.appimages/nvim
+
 alias ..="cd .."
 alias cp="cp -i"
 alias grep="ripgrep --color=auto"
