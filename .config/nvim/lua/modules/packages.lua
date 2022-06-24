@@ -16,12 +16,14 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
     use 'hrsh7th/cmp-buffer'                            -- nvim-cmp source for buffer words.
     use 'onsails/lspkind-nvim'                          -- add vscode-like pictograms to Neovim LSP.
     use 'simrat39/symbols-outline.nvim'                 -- Tree like view for symbols
-    
+
     -- Neovim Tree sitter
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
+
+    use 'windwp/nvim-ts-autotag'
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'                              -- Snippers for LSP
@@ -36,18 +38,22 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
     -- Files
     use 'preservim/nerdtree'
     use 'ryanoasis/vim-devicons'
+    use {
+        'ThePrimeagen/harpoon',
+        requires={{'nvim-lua/plenary.nvim'}},
+    }
 
     -- QoL
-    use 'tpope/vim-surround'
+    use {
+	    "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
     -- Statusline
-    use 'windwp/windline.nvim'
+    use 'vim-airline/vim-airline'
 
     -- Themes
-    use 'folke/tokyonight.nvim'
-    use 'junegunn/seoul256.vim'
     use 'sainnhe/everforest'
-    use 'NLKNguyen/papercolor-theme'
     use 'arcticicestudio/nord-vim'
 
     if packer_bootstrap then

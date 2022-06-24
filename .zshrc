@@ -50,28 +50,5 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-if [[ 'uname -a | rg -iq "ubuntu"' ]]; then
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-    source /usr/share/doc/fzf/examples/completion.zsh
-else
-    source /opt/local/share/fzf/shell/key-bindings.zsh
-    source /opt/local/share/fzf/shell/completion.zsh
-fi
 
-#
-# NVM 
-#
-if [[ ! -d "$HOME/.nvm" ]] then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-
-# pnpm
-export PNPM_HOME="/home/lebeef/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+source $ZSH_CONFIG/setup.zsh

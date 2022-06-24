@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "go", "gomod", "gowork", "typescript", "tsx", "javascript", "json", "graphql", "dockerfile", "lua", "rust", "html", "css", "scss", "cmake", "make", "c", "cpp", "python", "yaml", "bash", "regex", "vim" },
+  ensure_installed = { "go", "gomod", "gowork", "typescript", "tsx", "javascript", "json", "graphql", "dockerfile", "lua", "rust", "html", "css", "scss", "make", "c", "cpp", "python", "yaml", "bash", "regex", "vim" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
@@ -24,4 +24,7 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+  autotags = {
+      enable = true,
+  }
 }

@@ -35,7 +35,8 @@ Nnoremap(
     "<Leader>wl",
     "<C-W>l"
 )
--- Move line
+-- Move text
+-- move line N
 Nnoremap(
     "<C-j>",
     ":m +1<CR>"
@@ -44,6 +45,7 @@ Nnoremap(
     "<C-k>",
     ":m -2<CR>"
 )
+-- move line I
 Inoremap(
     "<C-j>",
     "<Esc>:m +1<CR>gi"
@@ -52,6 +54,7 @@ Inoremap(
     "<C-j>",
     "<Esc>:m -2<CR>gi"
 )
+-- move line N
 Vnoremap(
     "<C-j>",
     ":m '>+1<CR>gv"
@@ -60,7 +63,7 @@ Vnoremap(
     "<C-j>",
     ":m '>-2<CR>gv"
 )
-
+-- move line N
 Vnoremap(
     "<",
     "<gv"

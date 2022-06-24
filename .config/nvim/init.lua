@@ -4,7 +4,6 @@ require 'modules.lsp'
 require 'modules.kb'
 require 'modules.nerdtree'
 require 'modules.tree-sitter'
-require 'modules.windline'
 require 'modules.fzf'
 
 
@@ -18,7 +17,17 @@ local o = vim.o
 --
 
 vim.cmd([[
-colorscheme nord
+if has('termguicolors')
+    set termguicolors
+endif
+
+set background=dark
+
+colorscheme everforest 
+
+let g:everforest_background = 'soft'
+
+let g:everforest_better_performance = 1
 ]])
 
 
@@ -61,7 +70,7 @@ set.isfname:append('@-@')
 set.swapfile = false 
 set.backup = false 
 set.undofile = true
-set.undodir = '$HOME/.vim/undodir'
+set.undodir = '.vim/undodir'
 set.clipboard = 'unnamedplus'
 
 -- Windows
