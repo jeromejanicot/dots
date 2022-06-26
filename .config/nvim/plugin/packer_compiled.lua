@@ -174,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lefilet/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-prettier"] = {
+    loaded = true,
+    path = "/home/lefilet/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
   }
 }
 

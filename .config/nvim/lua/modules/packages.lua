@@ -42,6 +42,7 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
         'ThePrimeagen/harpoon',
         requires={{'nvim-lua/plenary.nvim'}},
     }
+    use 'prettier/vim-prettier'
 
     -- QoL
     use {
