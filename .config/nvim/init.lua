@@ -1,5 +1,6 @@
 require 'modules.lib'
 require 'modules.packages'
+require 'modules.harpoon'
 require 'modules.lsp'
 require 'modules.kb'
 require 'modules.nerdtree'

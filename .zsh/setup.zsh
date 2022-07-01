@@ -2,16 +2,16 @@
 # GO
 #
 export GO_VERSION=1.18.3
-export GO_ARCH=linux-arm64
+export GO_ARCH=linux-amd64
 export GO_HASH=beacbe1441bee4d7978b900136d1d6a71d150f0a9bb77e9d50c822065623a35a
 
 if [[ ! -d "$HOME/go" ]] then
     wget https://go.dev/dl/go${GO_VERSION}.${GO_ARCH}.tar.gz
-    if [[ "sha256sum --check ${GO_HASH} go${GO_VERSION}-${GO_ARCH}.tar.gz" ]] then
-        echo " --- CHECKSUM MATCHES ---"
+    #if [[ "sha256sum --check ${GO_HASH} go${GO_VERSION}-${GO_ARCH}.tar.gz" ]] then
+        #echo " --- CHECKSUM MATCHES ---"
         tar -xvf go${GO_VERSION}.${GO_ARCH}.tar.gz 
         rm go${GO_VERSION}.${GO_ARCH}.tar.gz
-    fi
+    #fi
 fi
 
 #

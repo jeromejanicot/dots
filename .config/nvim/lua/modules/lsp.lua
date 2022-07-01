@@ -129,78 +129,47 @@ cmp.event:on(
 
 -- Configurations for LSP.
 
-if utils.executable('tsserver') then
-    lspconfig.tsserver.setup({
-        on_attach = custom_attach,
-        capabilities = capabilities,
-    })
-else
-    vim.notify("tsserver not found!", "warn", {title = "Nvim-config"})
-end
+lspconfig.tsserver.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+})
 
-if utils.executable('clangd') then
-    lspconfig.clangd.setup({
-        on_attach = custom_attach,
-        capabilities = capabilities,
-        filetypes = { "c", "cpp", "cc" },
-    })
-else
-    vim.notify("clangd not found!", "warn", {title = "Nvim-config"})
-end
+lspconfig.clangd.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+    cmd = { "clang" },
+    filetypes = { "c", "cpp", "cc" },
+})
 
-if utils.executable('gopls') then
-    lspconfig.gopls.setup({
-        on_attach = custom_attach,
-        cmd = {"gopls", "serve"},
-        settings ={
-            gopls = {
-                analyses = {
-                    unusedparams = true,
-                },
-                staticcheck = true,
+lspconfig.gopls.setup({
+    on_attach = custom_attach,
+    cmd = {"gopls", "serve"},
+    settings ={
+        gopls = {
+            analyses = {
+                unusedparams = true,
             },
+            staticcheck = true,
         },
-    })
-else
-    vim.notify("gopls not found!", "warn", {title = "Nvim-config"})
-end
+    },
+})
 
-if utils.executable('astro') then
-    lspconfig.astro.setup({
-        on_attach = custom_attach,
-        capabilities = capabilities,
-        cmd = {"gopls", "serve"},
-        settings ={
-            gopls = {
-                analyses = {
-                    unusedparams = true,
-                },
-                staticcheck = true,
-            },
-        },
-    })
-else
-    vim.notify("astro not found!", "warn", {title = "Nvim-config"})
-end
+lspconfig.astro.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+})
 
-
-if utils.executable('eslint') then
-    lspconfig.eslint.setup({
-        on_attach = custom_attach,
-        capabilities = capabilities,
-    })
-else
-    vim.notify("eslint not found!", "warn", {title = "Nvim-config"})
-end
-
-if utils.executable('tailwindcss') then
-    lspconfig.tailwindcss.setup({
-        on_attach = custom_attach,
-        capabilities = capabilities,
-    })
-else
-    vim.notify("tailwindcss not found!", "warn", {title = "Nvim-config"})
-end
+lspconfig.eslint.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+})
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+}
+lspconfig.tailwindcss.setup({
+    on_attach = custom_attach,
+    capabilities = capabilities,
+})
 
 
 -- Window setup
