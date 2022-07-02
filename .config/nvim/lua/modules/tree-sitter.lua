@@ -26,5 +26,34 @@ require'nvim-treesitter.configs'.setup {
   },
   autotags = {
       enable = true,
+  },
+  context_commentstring = {
+    enable = true,
+    config = {
+      javascript = {
+        __default = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s'
+      },
+      tsx = {
+        __default = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s'
+      },
+      typescript = {
+        __default = '// %s',
+        comment = '// %s'
+      },
+      css = {
+        __default = '// %s',
+      },
+      scss = {
+        __default = '// %s',
+      }
+    }
   }
 }

@@ -21,33 +21,6 @@ Nnoremap(
     "<CR>",
     "o<Esc>"
 )
--- Window
--- Create and delete
-Nnoremap(
-    "<Leader>ww",
-    "<C-W>v"
-)
-Nnoremap(
-    "<Leader>wd",
-    "<C-W>c"
-)
--- Move around
-Nnoremap(
-    "<Leader>wh",
-    "<C-W>h"
-)
-Nnoremap(
-    "<Leader>wj",
-    "<C-W>j"
-)
-Nnoremap(
-    "<Leader>wk",
-    "<C-W>k"
-)
-Nnoremap(
-    "<Leader>wl",
-    "<C-W>l"
-)
 -- Move text
 -- move line N
 Nnoremap(

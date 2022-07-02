@@ -6,6 +6,7 @@ require 'modules.kb'
 require 'modules.nerdtree'
 require 'modules.tree-sitter'
 require 'modules.fzf'
+require 'modules.hydra'
 require 'modules.prettier'
 
 
@@ -40,8 +41,8 @@ let g:everforest_better_performance = 1
 set.guicursor = 'n-v-c-ve:block,i-ci:ver25,r-cr:hor20,o:hor50'
 
 set.number = true                   -- Show line numbers
-set.relativenumber = true           -- set distance from cursor
-set.hlsearch = false                -- Highlight search terms
+set.relativenumber = false          -- set distance from cursor
+set.hlsearch = true                 -- Highlight search terms
 set.list = true                     -- Show some invisible characters
 set.termguicolors = true            -- True color support
 set.hidden = true                   -- Enable background buffers

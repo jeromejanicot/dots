@@ -49,6 +49,19 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
 	    "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use 'tpope/vim-commentary'
+    use {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        requires = {{'tpoppe/vim-commentary'}}
+    }
+
+    -- Hydra
+    use { 
+        'anuvyklack/hydra.nvim',
+        requires = 'anuvyklack/keymap-layer.nvim' -- needed only for pink hydras
+    }
+
+
 
     -- Statusline
     use 'vim-airline/vim-airline'
