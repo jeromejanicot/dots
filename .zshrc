@@ -45,8 +45,8 @@ __source $ZSH_CONFIG/functions.zsh
 __source $ZSH_CONFIG/aliases.zsh
 __source $ZSH_CONFIG/path.zsh
 
-if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='rg --files --hidden'
+if type fd &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude **/.git'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 

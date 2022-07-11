@@ -49,7 +49,7 @@ require'nvim-treesitter.configs'.setup {
         comment = '// %s'
       },
       css = {
-        __default = '// %s',
+        __default = '/* %s */',
       },
       scss = {
         __default = '// %s',

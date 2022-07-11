@@ -12,5 +12,8 @@ Hydra({
       { 'j', '<C-W>j', { desc = 'bottom window'} },
       { 'k', '<C-W>k', { desc = 'top window'} },
       { 'l', '<C-W>l', {desc = 'right window'} },
+   },
+   config = {
+       exit = false,
    }
 })
