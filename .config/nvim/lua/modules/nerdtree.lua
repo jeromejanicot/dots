@@ -1,14 +1,15 @@
-Nnoremap (
+local Remap = require'modules.keymaps'
+Remap.nnoremap (
     '<leader>nf',
     ':NERDTreeFocus<CR>'
 )
 
-Nnoremap (
+Remap.nnoremap (
     '<leader>n',
     ':NERDTreeFocus<CR>'
 )
 
-Nnoremap (
+Remap.nnoremap (
     '<leader>nt',
     ':NERDTreeToggle<CR>'
 )

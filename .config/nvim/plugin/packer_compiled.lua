@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
+  ["move.nvim"] = {
+    loaded = true,
+    path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/move.nvim",
+    url = "https://github.com/fedepujol/move.nvim"
+  },
   nerdtree = {
     loaded = true,
     path = "/Users/lebeef/.local/share/nvim/site/pack/packer/start/nerdtree",

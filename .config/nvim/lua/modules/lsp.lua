@@ -1,8 +1,8 @@
 local fn = vim.fn
 local api = vim.api
 local lsp = vim.lsp
-local utils = require('utils')
-local lspconfig = require('lspconfig')
+local lspconfig = require'lspconfig'
+local Remap = require'modules.keymaps'
 
 local custom_attach = function(client, bufnr)
     -- Mappings
@@ -10,10 +10,10 @@ local custom_attach = function(client, bufnr)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "<C-]>", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-    vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
-    vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
-    vim.keymap.set("n", "<space>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, opts)
+    vim.keymap.set("n", "<C-i>", vim.lsp.buf.signature_help, opts)
+    -- vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
+    -- vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
+    -- vim.keymap.set("n", "<space>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, opts)
     vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
@@ -120,12 +120,25 @@ cmp.setup({
 })
 
 -- cmp_autopairs
+local npairs = require("nvim-autopairs")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 cmp.event:on(
     'confirm_done',
      cmp_autopairs.on_confirm_done()
 )
 
+-- npairs.setup({
+--     fast_wrap = {
+--       map = '<Shift-e>',
+--       chars = { '{', '[', '(', '"', "'" },
+--       pattern = [=[[%'%"%)%>%]%)%}%,]]=],
+--       end_key = '$',
+--       keys = 'qwertyuiopzxcvbnmasdfghjkl',
+--       check_comma = true,
+--       highlight = 'Search',
+--       highlight_grey='Comment'
+--     },
+-- })
 
 -- Configurations for LSP.
 
@@ -153,18 +166,18 @@ lspconfig.gopls.setup({
         },
     },
 })
-
-lspconfig.astro.setup({
+lspconfig.sumneko_lua.setup({
     on_attach = custom_attach,
     capabilities = capabilities,
+    cmd = {"/opt/local/bin/lua-language-server"},
 })
-
 lspconfig.eslint.setup({
     on_attach = custom_attach,
     capabilities = capabilities,
 })
 lspconfig.cssls.setup {
-  capabilities = capabilities,
+    on_attach = custom_attach,
+    capabilities = capabilities,
 }
 lspconfig.tailwindcss.setup({
     on_attach = custom_attach,

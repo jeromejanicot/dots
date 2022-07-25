@@ -1,8 +1,8 @@
-require 'modules.lib'
 require 'modules.packages'
-require 'modules.harpoon'
+require 'modules.keymaps'
+require 'modules.move'
 require 'modules.lsp'
-require 'modules.kb'
+require 'modules.harpoon'
 require 'modules.nerdtree'
 require 'modules.tree-sitter'
 require 'modules.fzf'
@@ -37,9 +37,6 @@ let g:everforest_better_performance = 1
 --
 -- SET
 --
-
-set.guicursor = 'n-v-c-ve:block,i-ci:ver25,r-cr:hor20,o:hor50'
-
 set.number = true                   -- Show line numbers
 set.relativenumber = false          -- set distance from cursor
 set.hlsearch = true                 -- Highlight search terms
@@ -87,9 +84,3 @@ set.mouse = 'a'
 
 --opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 --wo.colorcolumn = 80
-
---
--- KEYBINDINGS
---
-
---function map(mod, shortcut, command)

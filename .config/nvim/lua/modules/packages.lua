@@ -54,14 +54,13 @@ return require('packer').startup(function(use)  -- "use" arg avoid linter error 
         'JoosepAlviste/nvim-ts-context-commentstring',
         requires = {{'tpoppe/vim-commentary'}}
     }
+    use 'fedepujol/move.nvim'
 
     -- Hydra
     use { 
         'anuvyklack/hydra.nvim',
         requires = 'anuvyklack/keymap-layer.nvim' -- needed only for pink hydras
     }
-
-
 
     -- Statusline
     use 'vim-airline/vim-airline'
