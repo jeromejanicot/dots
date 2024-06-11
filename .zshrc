@@ -4,6 +4,8 @@ done
 
 export ZSH_CONFIG=$HOME/.zsh
 
+export DEVICE=$(uname -n)
+
 for config in $ZSH_CONFIG/config/pre/*; do
     . $config
 done
