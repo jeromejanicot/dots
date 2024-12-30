@@ -6,6 +6,7 @@ end
 # Prompt
 #-------------------------------------------------------------------------------
 set --universal --erase fish_greeting
+function fish_greeting; end
 
 set -g theme_color_scheme dracula
 
