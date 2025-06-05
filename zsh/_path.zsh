@@ -1,6 +1,8 @@
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
+
 # Go development
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 
