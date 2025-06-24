@@ -82,12 +82,10 @@ local plugin_specs = {
         "ibhagwan/fzf-lua",
         cmd = "FzfLua",
         opts = function()
-            local fzf_config = require("config.fzf")
-            fzf_config.opts()
+            return require("config.fzf").opts()
         end,
-        config = function()
-            local fzf_config = require("config.fzf")
-            fzf_config.config()
+        config = function(_, opts)
+            return require("config.fzf").config(_, opts)
         end,
         keys = require("config.fzf").keys
     },
