@@ -35,14 +35,47 @@ local plugin_specs = {
     },
     {
         "neovim/nvim-lspconfig",
-        dependencies = { "saghen/blink.cmp", "mason.nvim" },
+        dependencies = { "saghen/blink.cmp", "mason-org/mason.nvim" },
         opts = function()
-            local vlsp_config = require("config.lsp")
-            lsp_config.opts()
+            return require("config.lsp").opts()
         end,
-        config = function()
-            local lsp_config = require("config.lsp")
-            lsp_config.config()
+        config = function(_, opts)
+            return require("config.lsp").config(_, opts)
+        end,
+    },
+    {
+        "mason-org/mason.nvim",
+        cmd = "Mason",
+        build = ":MasonUpdate",
+        opts_extend = { "ensure_installed" },
+        opts = {
+            ensure_installed = {
+                "lua-language-server",
+                "stylua",
+                "shfmt",
+            }
+        },
+        config = function(_, opts)
+            require("mason").setup(opts)
+            local mr = require("mason-registry")
+            mr:on("package:install:success", function()
+                vim.defer_fn(function()
+                    -- trigger FileType event to possibly load this newly installed LSP server
+                    require("lazy.core.handler.event").trigger({
+                        event = "FileType",
+                        buf = vim.api.nvim_get_current_buf(),
+                    })
+                end, 100)
+            end)
+
+            mr.refresh(function()
+                for _, tool in ipairs(opts.ensure_installed) do
+                    local p = mr.get_package(tool)
+                    if not p:is_installed() then
+                        p:install()
+                    end
+                end
+            end)
         end,
     },
     {

@@ -106,9 +106,9 @@ M.opts = function()
 end
 
 M.config = function(_, opts)
-    -- setup keymaps
-    vim.lsp.on_attach(function(client, buffer)
-    end)
+    -- -- setup keymaps
+    -- vim.lsp.on_attach(function(client, buffer)
+    -- end)
 
     -- diagnostics signs
     if vim.fn.has("nvim-0.10.0") == 0 then
@@ -123,17 +123,17 @@ M.config = function(_, opts)
 
     if vim.fn.has("nvim-0.10") == 1 then
         -- inlay hints
-        if opts.inlay_hints.enabled then
-            LazyVim.lsp.on_supports_method("textDocument/inlayHint", function(client, buffer)
-                if
-                    vim.api.nvim_buf_is_valid(buffer)
-                    and vim.bo[buffer].buftype == ""
-                    and not vim.tbl_contains(opts.inlay_hints.exclude, vim.bo[buffer].filetype)
-                then
-                    vim.lsp.inlay_hint.enable(true, { bufnr = buffer })
-                end
-            end)
-        end
+        -- if opts.inlay_hints.enabled then
+        --     vim.lsp.on_supports_method("textDocument/inlayHint", function(client, buffer)
+        --         if
+        --             vim.api.nvim_buf_is_valid(buffer)
+        --             and vim.bo[buffer].buftype == ""
+        --             and not vim.tbl_contains(opts.inlay_hints.exclude, vim.bo[buffer].filetype)
+        --         then
+        --             vim.lsp.inlay_hint.enable(true, { bufnr = buffer })
+        --         end
+        --     end)
+        -- end
 
         -- code lens
         if opts.codelens.enabled and vim.lsp.codelens then
