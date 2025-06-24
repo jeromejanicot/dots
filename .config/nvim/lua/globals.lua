@@ -97,12 +97,12 @@ vim.opt.clipboard = "unnamedplus" -- Use system clipboard for copy/paste
 vim.g.clipboard = {
   name = 'unnamedplus',
   copy = {
-    ['+'] = 'pbcopy',
-    ['*'] = 'pbcopy',
+    ['+'] = 'xclip -selection clipboard',
+    ['*'] = 'xclip -selection primary',
   },
   paste = {
-    ['+'] = 'pbpaste',
-    ['*'] = 'pbpaste',
+    ['+'] = 'xclip -selection clipboard -o',
+    ['*'] = 'xclip -selection primary -o',
   },
   cache_enabled = 1,
 }
