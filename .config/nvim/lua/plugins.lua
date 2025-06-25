@@ -15,22 +15,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugin_specs = {
+    -- =========================================================================
+    -- CORE FUNCTIONALITY - Essential plugins for basic functionality
+    -- =========================================================================
+
+    -- LSP and Completion
     {
         "saghen/blink.cmp",
         dependencies = { 'rafamadriz/friendly-snippets' },
         version = "*",
         build = "cargo build --release",
-        opts = {
-            keymap = { preset = 'default' },
-            appearance = {
-                nerd_font_variant = 'mono'
-            },
-            completion = { documentation = { auto_show = false } },
-            sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
-            },
-            fuzzy = { implementation = "prefer_rust_with_warning" }
-        },
+        opts = function()
+            return require("config.blink").opts()
+        end,
+        config = function(_, opts)
+            return require("config.blink").config(_, opts)
+        end,
         opts_extend = { "sources.default" }
     },
     {
@@ -78,6 +78,35 @@ local plugin_specs = {
             end)
         end,
     },
+
+    -- Syntax Highlighting and Parsing
+    {
+        "nvim-treesitter/nvim-treesitter",
+        lazy = true,
+        build = ":TSUpdate",
+        opts = function()
+            return require("config.treesitter").opts()
+        end,
+        config = function(_, opts)
+            return require("config.treesitter").config(_, opts)
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        event = "VeryLazy",
+        branch = "master",
+        opts = function()
+            return require("config.treesitter-textobjects").opts()
+        end,
+        config = function(_, opts)
+            return require("config.treesitter-textobjects").config(_, opts)
+        end,
+    },
+
+    -- =========================================================================
+    -- NAVIGATION AND SEARCH - File navigation and search functionality
+    -- =========================================================================
+
     {
         "ibhagwan/fzf-lua",
         cmd = "FzfLua",
@@ -90,61 +119,45 @@ local plugin_specs = {
         keys = require("config.fzf").keys
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        lazy = true,
-        build = ":TSUpdate",
-        config = function()
-            require("config.treesitter")
-        end,
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        event = "VeryLazy",
-        branch = "master",
-        config = function()
-            require("config.treesitter-textobjects")
-        end,
-    },
-    {
-        "ibhagwan/fzf-lua",
-        cmd = "FzfLua",
+        "nvim-tree/nvim-tree.lua",
+        keys = { "<space>s" },
         opts = function()
-            require("config.fzf")
+            return require("config.nvim-tree").opts()
         end,
-
+        config = function(_, opts)
+            return require("config.nvim-tree").config(_, opts)
+        end,
     },
+
+    -- =========================================================================
+    -- UI/UX ENHANCEMENTS - Interface and user experience improvements
+    -- =========================================================================
+
     {
         "nvim-lualine/lualine.nvim",
         event = "BufRead",
-        cond = firenvim_not_active,
-        config = function()
-            require("config.lualine")
+        opts = function()
+            return require("config.lualine").opts()
+        end,
+        config = function(_, opts)
+            return require("config.lualine").config(_, opts)
         end,
     },
-    { "itchyny/vim-highlighturl", event = "BufReadPost" },
     {
-        "tpope/vim-commentary",
-        keys = {
-            { "gc", mode = "n" },
-            { "gc", mode = "v" },
-        },
-    },
-
-    -- Show undo history visually
-    { "simnalamburt/vim-mundo",   cmd = { "MundoToggle", "MundoShow" } },
-
-    -- Manage your yank history
-    {
-        "gbprod/yanky.nvim",
-        config = function()
-            require("config.yanky")
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = function()
+            return require("config.which-key").opts()
         end,
-        cmd = "YankyRingHistory",
+        config = function(_, opts)
+            return require("config.which-key").config(_, opts)
+        end,
     },
-    -- Handy unix command inside Vim (Rename, Move etc.)
-    { "tpope/vim-eunuch", cmd = { "Rename", "Delete" } },
 
-    -- Git command inside vim
+    -- =========================================================================
+    -- GIT INTEGRATION - Git-related functionality
+    -- =========================================================================
+
     {
         "tpope/vim-fugitive",
         event = "User InGitRepo",
@@ -157,49 +170,83 @@ local plugin_specs = {
         dependencies = {
             "nvim-lua/plenary.nvim",  -- required
             "sindrets/diffview.nvim", -- optional - Diff integration
-            -- Only one of these is needed.
             "ibhagwan/fzf-lua",       -- optional
         },
         event = "User InGitRepo",
     },
-
-    -- Better git log display
-    { "rbong/vim-flog",   cmd = { "Flog" } },
+    {
+        "lewis6991/gitsigns.nvim",
+        event = "BufRead",
+        opts = function()
+            return require("config.gitsigns").opts()
+        end,
+        config = function(_, opts)
+            return require("config.gitsigns").config(_, opts)
+        end,
+    },
+    {
+        "sindrets/diffview.nvim",
+        cmd = { "DiffviewOpen" },
+    },
     {
         "akinsho/git-conflict.nvim",
         version = "*",
         event = "VeryLazy",
-        config = function()
-            require("config.git-conflict")
+        opts = function()
+            return require("config.git-conflict").opts()
+        end,
+        config = function(_, opts)
+            return require("config.git-conflict").config(_, opts)
         end,
     },
     {
         "ruifm/gitlinker.nvim",
         event = "User InGitRepo",
-        config = function()
-            require("config.git-linker")
+        opts = function()
+            return require("config.git-linker").opts()
+        end,
+        config = function(_, opts)
+            return require("config.git-linker").config(_, opts)
         end,
     },
+    { "rbong/vim-flog",           cmd = { "Flog" } },
 
-    -- Show git change (change, delete, add) signs in vim sign column
+    -- =========================================================================
+    -- EDITING ENHANCEMENTS - Text manipulation and editing improvements
+    -- =========================================================================
+
     {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("config.gitsigns")
+        "tpope/vim-commentary",
+        keys = {
+            { "gc", mode = "n" },
+            { "gc", mode = "v" },
+        },
+    },
+    {
+        "gbprod/yanky.nvim",
+        cmd = "YankyRingHistory",
+        opts = function()
+            return require("config.yanky").opts()
         end,
-        event = "BufRead",
+        config = function(_, opts)
+            return require("config.yanky").config(_, opts)
+        end,
     },
+    { "simnalamburt/vim-mundo",   cmd = { "MundoToggle", "MundoShow" } },
+    { "jdhao/whitespace.nvim",    event = "VeryLazy" },
 
-    {
-        "sindrets/diffview.nvim",
-        cmd = { "DiffviewOpen" },
-    },
+    -- =========================================================================
+    -- UTILITIES AND FILE FORMAT SUPPORT - General utilities and file formats
+    -- =========================================================================
 
-    -- Asynchronous command execution
-    { "skywind3000/asyncrun.vim", lazy = true,     cmd = { "AsyncRun" } },
-    { "cespare/vim-toml",         ft = { "toml" }, branch = "main" },
+    { "tpope/vim-eunuch",         cmd = { "Rename", "Delete" } },
+    { "cespare/vim-toml",         ft = { "toml" },                     branch = "main" },
+    { "itchyny/vim-highlighturl", event = "BufReadPost" },
 
-    -- Debugger plugin
+    -- =========================================================================
+    -- DEVELOPMENT TOOLS - Debugging and async execution
+    -- =========================================================================
+
     {
         "sakhnik/nvim-gdb",
         enabled = function()
@@ -208,40 +255,20 @@ local plugin_specs = {
         build = { "bash install.sh" },
         lazy = true,
     },
+    { "skywind3000/asyncrun.vim", lazy = true,      cmd = { "AsyncRun" } },
 
-    -- Session management plugin
-    { "tpope/vim-obsession",   cmd = "Obsession" },
+    -- =========================================================================
+    -- SESSION MANAGEMENT - Workflow and session persistence
+    -- =========================================================================
 
-    -- showing keybindings
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        config = function()
-            require("config.which-key")
-        end,
-    },
-
-    -- show and trim trailing whitespaces
-    { "jdhao/whitespace.nvim", event = "VeryLazy" },
-
-    -- file explorer
-    {
-        "nvim-tree/nvim-tree.lua",
-        keys = { "<space>s" },
-        config = function()
-            require("config.nvim-tree")
-        end,
-    },
-
-
-
+    { "tpope/vim-obsession",      cmd = "Obsession" },
 }
 
 require("lazy").setup({
     spec = plugin_specs,
     ui = {
         border = "rounded",
-        title = "Plugin Nanager",
+        title = "Plugin Manager",
         title_pos = "center"
     }
 })
