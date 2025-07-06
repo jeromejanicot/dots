@@ -2,7 +2,7 @@ local M = {}
 
 function M.opts()
     return {
-        ensure_installed = { "python", "cpp", "lua", "vim", "json", "toml" },
+        ensure_installed = { "python", "cpp", "lua", "vim", "json", "toml", "go" },
         ignore_install = {}, -- List of parsers to ignore installing
         highlight = {
             enable = true,  -- false will disable the whole extension

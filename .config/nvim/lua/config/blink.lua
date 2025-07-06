@@ -2,7 +2,14 @@ local M = {}
 
 M.opts = function()
     return {
-        keymap = { preset = 'default' },
+        keymap = {
+          preset = 'default',
+          ["<Tab>"] = { "select_next", "fallback" },
+          ["<S-Tab>"] = { "select_prev", "fallback" },
+          ["<Enter>"] = { "select_and_accept", "fallback" },
+          ["<C-U>"] = { "scroll_documentation_up", "fallback" },
+          ["<C-D>"] = { "scroll_documentation_down", "fallback" },
+        },
         appearance = {
             nerd_font_variant = 'mono'
         },
@@ -14,7 +21,7 @@ M.opts = function()
         },
         fuzzy = {
             implementation = "prefer_rust_with_warning"
-        }
+        },
     }
 end
 

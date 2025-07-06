@@ -50,6 +50,8 @@ local plugin_specs = {
         opts_extend = { "ensure_installed" },
         opts = {
             ensure_installed = {
+                "gopls",
+                "clangd",
                 "lua-language-server",
                 "stylua",
                 "shfmt",
@@ -128,6 +130,16 @@ local plugin_specs = {
             return require("config.nvim-tree").config(_, opts)
         end,
     },
+    {
+      "ThePrimeagen/harpoon",
+      branch = "harpoon2",
+      opts = function()
+        return require("config.harpoon").opts()
+      end,
+      keys = function()
+        return require("config.harpoon").keys()
+      end,
+    },
 
     -- =========================================================================
     -- UI/UX ENHANCEMENTS - Interface and user experience improvements
@@ -141,16 +153,6 @@ local plugin_specs = {
         end,
         config = function(_, opts)
             return require("config.lualine").config(_, opts)
-        end,
-    },
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        opts = function()
-            return require("config.which-key").opts()
-        end,
-        config = function(_, opts)
-            return require("config.which-key").config(_, opts)
         end,
     },
 
@@ -242,6 +244,12 @@ local plugin_specs = {
     { "tpope/vim-eunuch",         cmd = { "Rename", "Delete" } },
     { "cespare/vim-toml",         ft = { "toml" },                     branch = "main" },
     { "itchyny/vim-highlighturl", event = "BufReadPost" },
+    {
+      "stevearc/conform.nvim",
+      config = function()
+        return require("config.conform").config()
+      end,
+    },
 
     -- =========================================================================
     -- DEVELOPMENT TOOLS - Debugging and async execution
