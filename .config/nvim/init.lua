@@ -2,5 +2,6 @@ vim.loader.enable()
 
 require("globals")
 require("bindings")
-require("plugins")
+require("auto")
+require("lazy_init")
 
