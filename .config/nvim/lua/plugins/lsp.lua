@@ -8,7 +8,23 @@ return {
 			build = ":MasonUpdate",
 			config = true,
 		},
-		"mason-org/mason-lspconfig.nvim",
+		{
+			"mason-org/mason-lspconfig.nvim",
+			opt = {
+				ensure_installed = {
+					"gopls",
+					"clangd",
+					"lua-language-server",
+					"typescript-language-server",
+					"rust-analyzer",
+					"stylua",
+					"black",
+					"prettier",
+					"prettierd",
+					"isort",
+				},
+			},
+		},
 		config = function()
 			local nvmg, autocmd = require("auto")
 			local blink = require("blink")
@@ -20,19 +36,7 @@ return {
 			)
 
 			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"gopls",
-					"clangd",
-					"lua-language-server",
-					"typescript-language-server",
-					"rust_analyzer",
-					"stylua",
-					"black",
-					"prettier",
-					"prettierd",
-					"issort",
-				},
-				automatic_installation = true,
+				automatic_enable = true,
 				handlers = {
 					function(server_name)
 						require("lspconfig")[server_name].setup({

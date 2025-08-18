@@ -97,15 +97,16 @@ vim.opt.clipboard = "unnamedplus" -- Use system clipboard for copy/paste
 vim.g.clipboard = {
     name = 'unnamedplus',
     copy = {
-        ['+'] = 'wl-copy --trim-newline --foreground --type text/plain',
-        ['*'] = 'wl-copy --trim-newline --foreground --primary --type text/plain',
+      ['+'] = 'wl-copy --trim-newline --foreground --type text/plain',
+      ['*'] = 'wl-copy --trim-newline --foreground --primary --type text/plain',
     },
     paste = {
-        ['+'] = 'wl-paste --no-newline',
-        ['*'] = 'wl-paste --no-newline --primary',
+      ['+'] = 'wl-paste --no-newline',
+      ['*'] = 'wl-paste --no-newline --primary',
     },
     cache_enabled = 1,
 }
+
 vim.opt.grepprg = "rg --vimgrep"   -- Use ripgrep for grep
 vim.opt.grepformat = "%f:%l:%c:%m" -- Grep format
 
