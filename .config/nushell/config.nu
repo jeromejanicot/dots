@@ -1,0 +1,32 @@
+# config.nu
+#
+# Installed by:
+# version = "0.106.1"
+#
+# This file is used to override default Nushell settings, define
+# (or import) custom commands, or run any other startup tasks.
+# See https://www.nushell.sh/book/configuration.html
+#
+# Nushell sets "sensible defaults" for most configuration settings,
+# so your `config.nu` only needs to override these defaults if desired.
+#
+# You can open this file in your default editor using:
+#     config nu
+#
+# You can also pretty-print and page through the documentation for configuration
+# options using:
+#     config nu --doc | nu-highlight | less -R
+
+$env.config.edit_mode = 'vi'
+
+alias ssh = ssh.exe
+alias ssh-add = ssh-add.exe
+
+alias dots = /usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME)
+
+# proto
+$env.PROTO_HOME = ($env.HOME | path join '.proto')
+$env.PATH = ($env.PATH | split row (char esep)
+  | prepend ($env.PROTO_HOME | path join bin)
+  | prepend ($env.PROTO_HOME | path join shims)
+  | uniq)

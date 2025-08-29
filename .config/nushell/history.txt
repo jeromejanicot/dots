@@ -1,0 +1,187 @@
+sudo-rs
+sudo
+su
+pacman -Syu 
+sudo pacman -Syu
+git clone --bare git@github.com:jeromejanicot/dots.git > $HOME/.dots
+git clone --bare git@github.com:jeromejanicot/dots.git > $env.HOME/.dots
+git clone --bare git@github.com:jeromejanicot/dots.git > ($env.HOME | append '.dots')
+sudo pacman -Sy git
+git clone --bare git@github.com:jeromejanicot/dots.git > ($env.HOME | append '.dots')
+git clone --bare git@github.com:jeromejanicot/dots.git > ($env.HOME)/.dots
+git clone --bare git@github.com:jeromejanicot/dots.git '($env.HOME)/.dots'
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ssh --version
+paru --version
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru/
+makepkg -si
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
+cd
+paru -S 1password-cli
+bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)
+bash^ <(curl -fsSL https://moonrepo.dev/install/proto.sh)
+bash -c <(curl -fsSL https://moonrepo.dev/install/proto.sh)
+bash -c (curl -fsSL https://moonrepo.dev/install/proto.sh)
+cd
+ssh-add.exe -l
+ssh-add -l
+ssh-add.exe -l
+/mnt/c/Windows/System32/OpenSSH/ssh-add.exe -l
+vim /etc/wsl.conf
+sudo vim /etc/wsl.conf
+/mnt/c/Windows/System32/OpenSSH/ssh-add.exe -l
+ssh-add.exe -l
+/mnt/c/Windows/System32/OpenSSH/ssh-add.exe -l
+/mnt/c/Windows/System32/OpenSSH/ssh-add.exe -l
+/mnt/c/Windows/System32/OpenSSH/ssh-keyscan.exe
+/mnt/c/Windows/System32/OpenSSH/ssh-agent.exe
+/mnt/c/Windows/System32/OpenSSH/ssh-add.exe
+ssh-agent.exe
+ssh-add -l
+ssh-add.exe -l
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+/usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME) checkout
+ls -ahl
+ls
+rm -rf ($env.HOME)
+cd ($env.HOME)
+ls -a
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+mkdir .dots
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ls -ahl
+ls
+ls -ahl
+ls -a
+cd 0
+cd .dots/
+ls
+cd ..
+ls -a
+rm -rf .dots
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+sudo pacman -S openssh
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+rm -rf .dots
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+git config --global user.name "jerome janicot"
+git config --global user.name "Jerome Janicot"
+git config --global user.email "Jerome Janicot"
+git config --global user.email "hello@jeromejanicot.com"
+nvim .gitconfig
+paru -Sy neovim-nightly
+nvim .gitconfig
+/usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME) checkout
+cd .dots
+git clone --bare git@github.com:jeromejanicot/dots.git "($env.HOME)/.dots"
+ls -a
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ls -a
+.gitconfig
+nvim .gitconfig
+ssh-add.exe -l
+bash -c "git clone --bare git@github.com:jeromejanicot/dots.git $HOME/.dots"
+ls -ahl
+exit
+bash -c "git clone --bare git@github.com:jeromejanicot/dots.git $HOME/.dots"
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ls -a
+cd .ssh/
+ls -a
+rm -rf known_hosts
+cd ..
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ssh-add.exe -l
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+ssh -vT git@github.com
+rm -rf .ssh/
+ssh -vT git@github.com
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+echo $env.SSH_AUTH_SOCK
+ssh -vT git@github.com
+git config --global core.sshCommand ssh.exe
+ssh -vT git@github.com
+git config --global core.sshCommand ssh.exe
+ssh -vT git@github.com
+ssh-add -l
+ssh-add.exe -l
+nvim .config/nushell/config.nu
+ssh-add -l
+echo $env.SSH_AUTH_SOCK
+nvim .config/nushell/config.nu
+echo $env.SSH_AUTH_SOCK
+ssh-add -l
+echo $env.ENV_CONVERSIONS
+nvim .config/nushell/config.nu
+ssh-add -l
+ssh-add.exe -l
+nvim .config/nushell/config.nu
+ssh-add -l
+ssh -vT git@github.com
+git clone --bare git@github.com:jeromejanicot/dots.git ($env.HOME)/.dots
+/usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME) checkout
+ls -a
+rm -rf zsh .zshrc
+dots status
+nvim .config/nushell/config.nu
+dots checkout
+dots status
+ls -a
+dots status
+dots config showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
+dots status
+cd .config/
+ls
+cd ..
+ls
+cd ($env.HOME)
+ls -ahl
+ls -ah
+cd
+cd .config/nvim/
+nvim .
+paru -S fzf
+nvim .
+paru -S wl-clipboard
+nvim .
+cd
+proto status
+proto install go
+proto install node bun pnpm npm
+proto install node
+proto install pnpm
+proto instal npm
+proto install npm
+cd .config/nvim/
+nvim .
+paru -S rust-nightly
+rust --version
+rustc --version
+rustup default nightly
+nvim .
+cd
+mkdir projects
+cd projects/
+git clone git@github.com:AtelierEclair/DataKraft.git
+cd DataKraft/
+ls
+nvim .
+proto status
+proto install
+cd apps/api/
+go mod install
+go mod tidy
+nvim .
+cd apps/api/
+cd 
+cd .config/nvim
+nvim lua/plugins/oil.lua
+nvim .
+cd
+cd .config/nushell/config.nu
+nvim .config/nushell/config.nu
+dots add .config/nushell/ .config/nvim/
+dots status
