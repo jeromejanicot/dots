@@ -12,7 +12,6 @@ return {
 		{
 			"Saghen/blink.cmp",
 			version = "1.*",
-			build = "cargo build --release",
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
 	},
@@ -27,13 +26,7 @@ return {
 				"gopls",
 				"clangd",
 				"lua_ls",
-				"ts_ls",
-				"rust-analyzer",
-				"stylua",
-				"black",
-				"prettier",
-				"prettierd",
-				"isort",
+				"zls",
 			},
 			automatic_enable = true,
 			handlers = {
@@ -96,9 +89,13 @@ return {
 				prefix = "",
 			},
 		})
+
+		-- vim.lsp.on_attach(function(client, buffer)
+		--   require("keymaps.lsp").
+
 		-- setup keymaps
-		autocmd("LspAttach", {
-			group = nvmg,
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("my.lsp", {}),
 			callback = function(e)
 				local opts = { buffer = e.buf }
 				vim.keymap.set("n", "z", function()
@@ -112,9 +109,6 @@ return {
 				end, opts)
 				vim.keymap.set("n", "<leader>vws", function()
 					vim.lsp.buf.workspace_symbol()
-				end, opts)
-				vim.keymap.set("n", "<leader>vd", function()
-					vim.diagnostic.open_float()
 				end, opts)
 				vim.keymap.set("n", "<leader>vca", function()
 					vim.lsp.buf.code_action()
@@ -133,6 +127,9 @@ return {
 				end, opts)
 				vim.keymap.set("n", "]d", function()
 					vim.diagnostic.goto_prev()
+				end, opts)
+				vim.keymap.set("n", "<leader>cd", function()
+					vim.diagnostic.open_float()
 				end, opts)
 			end,
 		})

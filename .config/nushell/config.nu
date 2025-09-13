@@ -17,10 +17,13 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+$env.path ++= ["~/.local/bin", "~/go/bin"]
+
 $env.config.edit_mode = 'vi'
 
 alias ssh = ssh.exe
 alias ssh-add = ssh-add.exe
+alias python = ~/.local/bin/python3.13
 
 alias dots = /usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME)
 

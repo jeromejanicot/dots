@@ -185,3 +185,230 @@ cd .config/nushell/config.nu
 nvim .config/nushell/config.nu
 dots add .config/nushell/ .config/nvim/
 dots status
+dots add -u
+dots status
+dots commit -m "zsh -> nushell; nvim oil and fixing mason"
+proto plugin add zig "github://konomae/zig-plugin"
+proto install zig
+zig --version
+zig -v
+zig version
+paru -Syu 
+cd
+cd .config/nvim/
+nvim .
+cd
+proto install npm
+proto install npm 11.5.1
+proto install uv
+uv install python
+uv python install
+cd .config/nushell/
+nvim .
+python --version
+python3 --version
+uv python
+uv python pin 3.15
+python --version
+cd
+uv python version
+uv python list
+uv python
+uv python pin
+uv python pin 3.13.5
+python --version
+uv python --version
+uv python version
+uv python install
+python3.13
+python3.13 
+python
+nvim .
+which python3.13
+which python3.13
+cd .config/nushell/
+nvim .
+python --version
+cd
+uv tool install --upgrade pynvim
+nvim .
+python 
+cd projects/DataKraft/
+code .
+paru -S wget
+code .
+cd
+cd .config/nvim/
+nvim .
+nvim .
+ls
+cd lua/
+ls
+nvim auto.lua
+nvim .
+cd projects/DataKraft/
+code .
+cd
+cd .config/nvim/
+code .
+cd
+cd .config/nvim/
+nvim .
+nvim .
+cd projects/DataKraft/
+code .
+buf generate
+protoc-gen-go
+go mod tidy
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest<\n>
+go get google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+buf generate
+go mod tidy
+buf generate
+go install google.golang.org/protobuf/cmd/protoc-gen-go
+go get google.golang.org/protobuf/cmd/protoc-gen-go
+buf generate
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.31.0
+buf generate
+go install google.golang.org/protobuf@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go get google.golang.org/protobuf/cmd/protoc-gen-go@latest
+buf generate
+cd
+$env.PATH
+which go
+protoc-gen-go
+go --version
+go version
+protoc-gen-go
+cd apps/api/
+protoc-gen-go
+go get google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go get google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go get google.golang.org/protobuf/cmd/protoc-gen-go@1.36
+go get google.golang.org/protobuf/cmd/protoc-gen-go@1.5.4
+go get google.golang.org/protobuf/cmd/protoc-gen-go@v1.5.4
+go get google.golang.org/protobuf/cmd/protoc-gen-go
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest<\n>
+go install google.golang.org/protobuf/cmd/protoc-gen-go@lates
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+ls
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go get google.golang.org/protobuf/cmd/protoc-gen-go@latest
+protoc-gen-go
+protoc 
+protoc --version
+cd .config/nushell/
+$env.PATH
+go env GOPATH
+ls -a
+cd
+cd go/
+ls
+cd ..
+ls
+mv ($env.HOME) OTHER
+echo (go env GOPATH)
+$env.PATH
+cd projects/DataKraft/
+code .
+cd apps/api/
+buf generate
+go get google.golang.org/grpc
+go install google.golang.org/grpc/cmd/proc-gen-go-grpc@latest
+go install google.golang.org/protobuf/cmd/proc-gen-go-grpc@latest
+buf generate
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+buf --version
+protoc-gen-go --version
+protoc-gen-go-grpc --version
+buf generate
+cd apps/docker/dev/
+ls
+paru -S docker docker-compose
+docker compose up
+sudo systemctl enable docker
+sudo systemctl start docker
+cd projects/DataKraft/
+cd apps/docker/
+cd dev/
+docker compose up
+cd ..
+cd api/
+code .
+docker compose up
+go install github.com/go-delve/delve/cmd/dlv@latest
+go --version
+proto install
+exit
+go --version
+cd
+proto --version
+proto version
+ls -a
+paru -S
+paru -Sy
+proto version
+nvim --version
+nvim .config/nushell/config.nu
+go --version
+cd projects/DataKraft/apps/api/
+)
+go install github.com/go-delve/delve/cmd/dlv@latest
+cd projects/DataKraft/apps/api/
+code .
+cd ..
+code .
+cd apps/docker/
+cd dev/
+docker compose up
+paru -Sy docker docker-compose
+docker compose up
+exit
+cd apps/docker/dev/
+docker compose up
+cd apps/api/cmd/server/
+go test -race .
+go test -race main.go
+go run main.go
+go run --help
+go help run
+go build main.go
+ls
+go run main
+./main
+rm main
+docker compose up
+go run main
+go run main.go
+cd projects/DataKraft/
+code .
+cd 
+mkdir work
+cd work/
+ls
+code .
+mkdir serper
+cd serper/
+cd
+cd .config/nvim/
+ls
+nvim .
+paru -Sy
+paru -Syu
+proto --version
+nushell --version
+nu version
+nu --version
+paru -Syu
+cd .config/nvim/
+nvim .
+paru -Syu
+cd .config/nvim/
+nvim .
+;
+nvim .
+cd
+ls
+dots status
