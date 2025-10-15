@@ -412,3 +412,835 @@ nvim .
 cd
 ls
 dots status
+dots add -u
+dots commit -m "fixing nvim harpoon, trouble, fugitive"
+mv `($env.HOME)` OTHER
+ls -a
+cd OTHER/
+ls
+..
+rm OTHER/
+ls
+cd
+cd projects/DataKraft/
+ls
+cd apps/docker/dev/
+docker compose up
+cd apps/api/cmd/server/
+go run main.go
+cd apps/api/cmd/server/
+go run main.go
+docker compose up
+docker compose u
+docker compose up
+go run main.go
+go build main.go
+gdb main
+gdb main.go
+gdb --version
+paru -Syu gdb
+delve main
+delve --version
+delve
+dlv main
+dlv debug main
+docker compose up
+dlv debug main.go
+dlv debug main
+dlv debug main.go
+go run main.go
+docker compose up
+dlv debug main.go
+go run main.go
+dlv debug main.go
+cd ..
+..
+ls
+buf generate
+go build cmd/server/main.go
+go run cmd/server/main.go
+dlv debug main.go
+24
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+docker compose up
+..
+nvim .
+cd api/
+go run cmd/server/main.go
+dlv debug cmd/server/main.go
+exit
+cd projects/DataKraft/
+ls
+cd apps/docker/dev/
+docker compose up
+go run apps/api/cmd/server/main.go
+cd apps/api/
+ls
+go run cmd/server/main.go
+go list -m google.golang.org/grpc
+go get google.golang.org/grpc@latest
+go mod tidy
+go clean -modcache
+go mod download
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+docker compose up
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+paru -Syu valgrind
+go build cmd/server/main.go
+valgrind --leak-check=full main
+valgrind --leak-check=full ./main
+go build -race cmd/server/main.go
+./main
+docker compose up --build
+cd
+cd projects/DataKraft/apps/api/
+nvim .
+ls
+rm -rf gen
+protoc version
+protoc --version
+cd
+paru -Syu
+cd projects/DataKraft/
+cd
+cd .config/nvim/
+nvim .
+nvim .
+proto install protoc --pin
+proto install proto --pin
+nvim .
+proto sync
+proto install sync
+proto update
+proto install
+mkdir v05
+mv v05 apps/api/pb/
+mv apps/api/pb/user/ apps/api/pb/v05/
+mv apps/api/pb/message/ apps/api/pb/v05/
+mv apps/api/pb/v05/user/message/ apps/api/pb/v05/user/
+mv apps/api/pb/v05/user/message/ apps/api/pb/v05/
+nvim .
+cd apps/api/
+buf generate
+cd pb/
+buf generate
+cd ..
+buf generate
+nvim .
+buf generate
+ls -a
+buf generate
+ls
+buf generate
+code .
+buf generate
+cd apps/docker/dev/
+docker compose up
+go run cmd/server/main.go
+docker compose up
+docker compose up --build
+cd
+cd projects/DataKraft/
+ls
+code .
+docker compose up
+docker compose up --build
+go run cmd/server/main.go
+docker compose up
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+docker compose up --build
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+dlv debug cmd/server/main.go
+cd
+mkdir test
+cd test/
+ls
+git clone https://github.com/your-username/go-http-server.git
+ls -a
+ssh -vT git@github.com
+git clone https://github.com/your-username/go-http-server.git
+git clone git@github.com:sepehrsoh/go-http-server.git
+cd go-http-server/
+make all
+./go-http-server
+ls -a
+nvim .
+./go-http-server start
+./go-http-server run
+./go-http-server
+cd ..
+ls
+git clone git@github.com:JordanMarcelino/go-gin-starter.git
+cd go-gin-starter/
+air
+go mod download
+air
+go air
+go mod tidy
+air
+ls
+make air
+nvim .
+cd Dockerfile
+ls
+docker compose up -d --build
+docker run Dockerfile
+docker build
+docker build .
+ls
+touch .env
+nvim .env
+docker build .
+nvim .
+docker build .
+docker compose up
+go run cmd/server/main.go
+dlv debug cmd/server/main.go
+docker compose up
+docker compose up --build
+go run cmd/server/main.go
+cd projects/DataKraft/
+code .
+go get -u
+cd apps/api/
+go get -u
+go mod tidy
+go mod -u
+go get u
+go get -u
+dlv debug cmd/server/main.go
+go run cmd/server/main.go
+cd ..
+cd docker/dev/
+docker compose up
+docker compose up --build
+..
+..
+git status
+git log
+paru -Syu less
+git log
+cd api
+ls
+go get -u github.com/go-chi/chi/v5
+proto upgrade
+go mod tidy
+go get -u github.com/go-chi/chi/v5
+go mod tidy
+cd
+cd test/go-gin-starter/
+docker compose up --build ../docker/dev/docker-compose.yaml
+cd 
+cd projects/DataKraft/
+cd apps/docker/
+cd dev/
+docker compose up --build
+docker compose up
+go run cmd/server/main.go
+docker compose up
+go run cmd/server/main.go
+netstat -nlp | grep 50000
+lsof -i :50000
+paru -Syu lsof
+lsof -i :50000
+go run cmd/server/main.go
+lsof -i :50000
+docker compose up
+lsof -i :50000
+docker compose up --build
+..
+git status
+git add -u
+git status
+git add apps
+git commit -m "protobuf and grpc first step, potential issues segfault etc"
+git add -u
+git commit -m "fixed port exposed in docker-compose"
+docker compose
+docker compose up --build
+dlv debug cmd/server/main.go
+go build -o cmd/server/main cmd/server/main.go
+./cmd/server/main
+docker compose up --build
+grpcurl -plaintext localhost:50000 list
+paru -Syu grpcurl
+grpcurl -plaintext localhost:50000 list
+go build -o cmd/server/main cmd/server/main.go
+git status
+git add -u
+git status
+git add apps documentation/
+git commit -m "app works when build and run locally, not on docker"
+git push github
+git push origin
+./cmd/server/main
+grpcurl -plaintext localhost:50000 list
+docker compose up --build
+docker compose logs datakraft_api
+docker compose logs api
+docker compose up --build
+go run cmd/server/main.go
+docker compose up --build
+git status
+git add -u
+git commit -m "fixed issue: localhost refers to container itself, needs to refer to other container host by their docker service name"
+git push origin
+paru -Syu 
+cd .config/nvim/
+nvim .
+cd
+cd projects/DataKraft/
+cd apps/docker/
+docker compose up --build
+cd dev
+nvim .
+git status
+git add -u
+git commit -m "air hotreload for dev.docker"
+cd apps/api/
+..
+proto plugin add migrate "https://raw.githubusercontent.com/jamesukiyo/proto-plugins/master/migrate.toml" --pin
+proto plugin add migrate "https://raw.githubusercontent.com/jamesukiyo/proto-plugins/master/migrate.toml"
+proto install
+nvim .prototools
+proto install migrate --pin
+CD
+cd nvim
+cd
+cd .config/nvim/
+nvim .
+cd apps/api/
+migrate --version
+migrate create -ext sql -dir db/migrations seq create_locations_table
+migrate create -ext sql -dir db/migrations seq create_inventories_table
+migrate create -ext sql -dir db/migrations seq create_products_table
+rm db/migrations/*
+migrate create -ext sql -dir db/migrations -seq create_locations_table
+migrate create -ext sql -dir db/migrations -seq create_inventories_table
+migrate create -ext sql -dir db/migrations -seq create_products_table
+cd projects/DataKraft/
+code .
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft
+cd apps/api
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up\
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate create -ext sql -dir db/migrations -seq create_inventory_items
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate --help
+migrate create -ext sql -dir db/migrations -format -tz utc 1_create_locations
+migrate create -ext sql -dir db/migrations -format {mmddyyyy} -tz 1_create_locations
+migrate create -ext sql -dir db/migrations -format {mmddyyyy} -tz UTC 1_create_locations
+migrate create -ext sql -dir db/migrations -format -tz UTC 1_create_locations
+migrate create -ext sql -dir db/migrations -format 1_create_locations
+migrate create -ext sql -dir db/migrations -format {format}_1_create_locations
+migrate create -ext sql -dir db/migrations {format}_1_create_locations
+migrate create -ext sql -dir db/migrations _1_create_locations
+migrate create -ext sql -dir db/migrations _2_create_products
+migrate create -ext sql -dir db/migrations _2_create_inventories
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force
+migrate create -ext sql -dir db/migrations _3_create_inventories
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force 3
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up  v
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force 1
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force 2
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations down
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force 20250916181754
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up force V 20250916181754
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up V 20250916181754
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+git status
+git add -u
+git add db/migrations/
+git commit -m "initial migrations for locations, inventory, products"
+..
+ls
+cd frontend/
+ls
+pnpm --version
+pnpm init -y
+pnpm init
+ls
+..
+git status
+git add apps/frontend/
+git add -u
+git commit -m "tanstack solidjs starter template"
+paru -Syu
+cd .config/nvim/
+nvim .
+cd
+cd projects/DataKraft/
+cd apps/docker/dev/
+docker compose up
+sudo systemctl enable docker
+sudo systemctl start docker
+docker compose up
+code .
+vulkaninfo --summary
+cd
+cd .config/nvim
+cd apps/api/
+buf generate
+code .
+git status
+git add apps documentation/
+git commit -m "inventory pb; alpha documentation for protobuf"
+git push origin
+paru -Syu
+cd projects/DataKraft/
+code .
+cd 
+cd .config/nvim
+nvim .
+nvim .
+git status
+git ls-files
+paru -Syu fd rg bat delta
+paru -Syu ripgrep
+nvim .
+op --version
+cd
+op read op://personal/deepseek_api_key/credential
+paru -Syu 1password-cli
+op --version
+op read op://personal/deepseek_api_key/credential
+'eval $(op signin)'
+bash -c "eval $(op signin)"
+op read op://personal/deepseek_api_key/credential
+op read op://Personal/deepseek/credential
+op read op://Personal/deepseek_api_key/credential
+op signin
+eval '$(op sigin)'
+op signin
+op signin -f
+op read op://Personal/deepseek_api_key/credential
+$env.OP_SESSION_IZ2UDNSZLJCJHBZUHPNWLFNVHM="VgQ9JWiKmfw3tzVE-f1Mxj203AE-IBYyVrHykn_ncR4"
+op read op://Personal/deepseek_api_key/credential
+op signin -f
+op 
+op rad
+op read
+code. 
+code .
+cd apps/api
+buf generate
+..
+git status
+git add -u
+git add apps
+git add documents
+git add documentation/
+git commit -m "protobuf products;inventory; inventory and products repository; inventory service"
+cd apps/api
+buf generate
+..
+git status
+git add -u
+git commit -m "product service; need to fix some issues with type etc."
+git push origin
+paru -Syu
+cd projects/DataKraft/
+code .
+paru -Syu
+sudo pacman -Syu
+sudo pacman -Syu elinks
+ping google.com
+ping archlinux.org
+ping google.com
+systemctl list-units
+systemctl status systemd-networkd
+ip a
+sudo pacman-mirrors -g
+sudo pacman -Syy
+sudo pacman -Scc
+paru -Syu
+sudo pacman -Syy
+nvim /etc/pacman.d/mirrorlist
+sudo nvim /etc/pacman.d/mirrorlist
+sudo paru -Syu
+paru -Syu
+systemctl status systemd-resolved
+cd /etc/systemd/ls
+cd /etc/systemd/
+ls
+nvim resolved.conf
+nvim networkd.conf
+ping google.com
+paru -Syu
+ping github.com
+sudo nvim /etc/wsl.conf
+shutdown
+ping google.com
+sudo nvim /etc/wsl.conf
+journalctl -xte
+journalctl -x
+paru -Syu
+journalctl -x
+systemctl restart systemd-resolved
+sudo systemctl restart systemd-resolved
+ping google.com
+systemctl status systemd-resolved
+paru -Syu
+sudo nvim /etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved
+ping google.com
+exit
+paru -Syu
+resolved
+resolvctl
+resolvectl
+sudo nvim /etc/systemd/resolved.conf
+sudo nvim /etc/systemd/resolved.conf.d/security.conf
+mkdir /etc/systemd/resolved.conf.d
+sudo mkdir /etc/systemd/resolved.conf.d
+nvim /etc/systemd/resolved.conf.d/security.conf
+sudo nvim /etc/systemd/resolved.conf.d/security.conf
+sudo systemctl restart systemd-resolved
+ping google.com
+sudo systemctl status systemd-resolved
+resolvectl
+ping google.com
+resolvectl
+sudo nvim /etc/systemd/resolved.conf.d/security.conf
+sudo systemctl restart systemd-resolved
+ping google.com
+paru -Syu
+cd projects/DataKraft/
+code .
+cd projects/DataKraft/
+ls
+cd apps/docker/dev/
+docker compose up
+docker compose up --build
+grpcurl -plaintext localhost:50000 list
+..
+git status
+git add apps
+git commit -m "inventory and product services added to grpc server; need to test now"
+git status
+git add documentation/
+git commit -m "database.md starting to consider tenancy model for application"
+cd apps/docker/dev/
+docker compose up
+docker compose up --build
+git status
+git add apps/
+git commit -m "dev.docker and docker compose for frontend dev"
+cd apps/frontend/
+pnpm add @bufbuild/buf @bufbuild/protobuf @bufbuild/protoc-gen-es @connectrpc/connect
+pnpmx buf config init
+pnpx buf config init
+pnpx buf
+buf config init
+buf lint
+cd ..
+buf generate
+buf mod init
+buf config update
+buf mod config
+buf config ls-modules
+buf generate
+$env.PATH
+protoc-gen-es
+git status
+git add apps buf.yaml proto -u
+git statu
+git status
+git add -u
+git add apps buf.yaml proto
+git status
+git commit -m "buf workspace; client proto gen; server proto gen"
+code .
+git status
+git add -u
+git add apps
+git commit -m "solidjs basic routing works; needs to implement connect for solidjs and tanstack-query"
+git status
+git add apps/
+git commit -m "grpc clients created"
+git status
+cd apps/api/
+~/projects/DataKraft/apps/api:
+go install github.com/bufbuild/buf/cmd/buf@latest
+go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
+buf generate
+buf lint
+buf generate
+docker compose up --build
+got get github.com/rs/cors
+got install github.com/rs/cors
+go get github.com/rs/core
+go get github.com/rs/cors<\n>
+go get github.com/connectrpc/cors-go
+go get github.com/connectrpc/cors
+go get connectrpc.com/cors
+docker compose up --build
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+docker compose up --build
+migrate -database postgres://datakraft:datakraft@localhost:5432/datakraft?sslmode=disable -path db/migrations up
+docker compose up --build
+..
+git status
+git add -u
+git add apps
+git commit -m "client -> grpc connect server works!!!!!!!"
+git push origin
+           cd projects/DataKraft/apps/docker/dev/
+docker compose up --build
+..
+git status
+git add documentation/
+git commit -m "restructuring documentation: more precise feature -> feature requirement -> technical requirement -> technical specification"
+go work init
+git status
+git add -u
+git status
+git commit 
+git commit -m "?"
+git status
+git add apps
+git add go.work.sum
+git commit -m "datakraft/api -> gastrokraft-api"
+git add -u
+git commit -m "datakraft/api -> gastrokraft-api"
+git status
+git add db docker 
+git status
+git add -u
+git status
+git commit -m "monorepo reorganization"
+git status
+cd docker/dev/
+docker compose up --build
+docker compose up --build\
+docker compose up --build
+sudo rm -rf apps/gastrokraft-frontend/node_modules/
+docker compose up --build
+git status
+git add -u
+git add apps proto
+git commit -m "monorepo reorganization: gastrokraft-frontend; proto/gastrokraft"
+git status
+paru -Syu
+code .
+cd projects/DataKraft/
+code .
+cd apps/gastrokraft-frontend/
+cd ..
+..
+git status
+git add apps
+git add commit -m "sidebar with sidebartoggle"
+git status
+git add .gitignore .prototools
+git commit -m "sidebar with sidebartoggle"
+git status
+git add -u
+git add packages
+git add pnpm-workspace.yaml package.json
+git commit -m "creme-ui"
+pnpm add --global nx
+nx init
+cd packages/creme-ui/
+pnpm add -D typescript
+pnpm add @ark-ui/solid solid-js
+cd ..
+pnpm install
+pnpm add -
+pnpm add -D @pandacss/dev --filter creme-ui
+cd packages/creme-ui/
+cd packages/@datakraft/styled-system/
+pnpm init
+pnpm add -D @pandacss/dev --filter @datakraft/styled-system
+cd
+cd projects/DataKraft/
+pnpm add -D @pandacss/dev --filter @datakraft/styled-system
+pnpm add -D @pandacss/dev --filter packages/@datakraft/styled-system
+cd packages/@datakraft/styled-system/
+pnpm add -D @pandacss/dev
+cd ..
+cd creme-ui/
+panda init
+pnpm panda init
+pnpm install
+panda init
+pnpm panda init
+pnpm install
+pnpm panda init
+pnpm install
+cd ..
+pnpm install
+cd packages/creme-ui/
+pnpm panda init
+pnpm add -D tsdown
+pnpm tsdown
+pnpm tsdown --version
+pnpm build
+cd ..
+..
+cd apps/gastrokraft-frontend/
+pnpm install
+pnpm build
+pnpm update
+pnpm install
+pnpm build
+pnpm update
+pnpm install
+pnpm build
+..
+git status
+git add -u
+git add nx.json packages pnpm-lock.yaml
+git commit -m "creme-ui library build with tsdown; import in frontend; early nx setup"
+pnpm watch
+git status
+git add -u
+git add packages/
+git commit -m "creme-ui SidebarProvider"
+..
+cd package
+cd packages/
+ls
+cd creme-system/
+pnpm install
+pnpm panda init
+pnpm add -D typescript
+pnpm install
+pnpm panda init
+pnpm panda init
+pnpm add -D tsdown
+cd packages/creme-ui/
+pnpm install
+pnpm panda prepare
+pnpm watch
+pnpm install
+pnpm watch
+pnpm panda init
+pnpm watch
+pnpm build
+pnpm install
+pnpm watch
+pnpm install
+pnpm watch
+         cd projects/DataKraft/
+code .
+cd packages/creme-ui/
+..
+cd packages/creme-system/
+cd apps/gastrokraft-frontend/
+pnpm watch
+pnpm panda prepare
+pnpm panda init
+pnpm dev
+pnpm watch
+pnpm panda-emit-pkg
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda emit-pkg
+pnpm build
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+clear
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm install
+pnpm watch
+pnpm install
+pnpm panda prepare
+pnpm watch
+pnpm install
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm panda emit-pkg
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm watch
+pnpm panda prepare
+cd projects/DataKraft/
+code .
+cd packages/creme-system/
+..
+cd creme-ui
+pnpm panda prepare
+..
+cd apps/gastrokraft-frontend/
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm build
+pnpm panda prepare
+pnpm watch
+pnpm panda prepare
+pnpm dev
+pnpm panda prepare
+pnpm daev
+pnpm watch
+pnpm panda prepare
+pnpm watch
+pnpm build
+pnpm dev
+pnpm install
+pnpm dev
+paru -Syu
+sudo pacman -Syu
+paru -Syu
+cd projects/DataKraft/
+code .
+paru -Syu
+cd apps/gastrokraft-frontend/
+pnpm install tailwindcss-animate class-variante-authority clsx tailwind-merge
+ping google.com
+pnpm add tailwindcss-animate class-variante-authority clsx tailwind-merge
+pnpm install tailwindcss-animate class-variance-authority clsx tailwind-merge
+pnpm add -D @types/node
+paru -Syu
+pari -Syu
+sudo paru -Syu
+paru -Syu
+dots staus
+dots status
