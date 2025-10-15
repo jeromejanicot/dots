@@ -16,6 +16,7 @@ return {
 					"python",
 					"go",
 					"zig",
+					"proto",
 				},
 
 				-- Install parsers synchronously (only applied to `ensure_installed`)
