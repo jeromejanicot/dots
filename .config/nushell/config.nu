@@ -17,15 +17,23 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-$env.path ++= ["~/.local/bin", "~/go/bin"]
-
-$env.config.edit_mode = 'vi'
 
 alias ssh = ssh.exe
 alias ssh-add = ssh-add.exe
 alias python = ~/.local/bin/python3.13
+# alias op = /mnt/c/Users/jerom/AppData/Local/Microsoft/WinGet/Packages/AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe/op.exe
 
 alias dots = /usr/bin/git --git-dir=($env.HOME)/.dots --work-tree=($env.HOME)
+
+def op [...args] {
+ /mnt/c/Users/jerom/AppData/Local/Microsoft/WinGet/Packages/AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe/op.exe ...$args
+}
+
+$env.path ++= ["~/.local/bin", "~/go/bin"]
+
+$env.config.edit_mode = 'vi'
+$env.SHELL = '/usr/sbin/nu'
+#$env.DEEPSEEK_API_KEY = op read op://Personal/deepseek_api_key/credential
 
 # proto
 $env.PROTO_HOME = ($env.HOME | path join '.proto')
