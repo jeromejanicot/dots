@@ -1244,3 +1244,137 @@ sudo paru -Syu
 paru -Syu
 dots staus
 dots status
+dots add -u
+dots commit -m "nvim and nushell"
+cd projects/DataKraft/
+git status
+op version
+op --version
+op account
+op account list
+op read op://Personal/deepseek_api_key/credential
+op.exe read op://Personal/deepseek_api_key/credential
+op.exe
+op
+op read op://Personal/deepseek_api_key/credential
+op signin
+eval '$(op sigin)'
+bash -c "eval $(op signin)"
+op read op://Personal/deepseek_api_key/credential
+op signin --help
+op account list
+op read --account my op://Personal/deepseek_api_key/credential
+bash -c "eval $(op signin)"
+op account list
+op vault ls
+op vault
+op vault list
+cd
+ls
+rm -rf "@"
+ls -ahl
+ls
+ls -a
+nvim .config/nushell/config.nu
+op --version
+op read op://Personal/deepseek_api_key/credential
+cd .config/
+cd nvim/
+nvim .
+cd
+cd projects/DataKraft/
+nvim .
+op read op://Personal/deepseek_api_key/credential --no-newline
+nvim .
+nvim .
+which nu
+nvim .
+paru -Rn 1password-cli
+op --version
+cd
+cd .config/nushell/
+nvim .bashrc
+nvim .
+cd
+cd projects/DataKraft/
+code .
+cd ..
+projects
+mkdir gofast
+cd gofast/
+cd ..
+ls
+mkdir jerome_janicot
+cd jerome_janicot/
+cd .config/nvim/
+cd
+cd .config/nushell/
+which nu
+cd
+cd projects/DataKraft/
+echo $env.SHELL
+nvim .
+nvim .
+nvim .
+nvim config.nu
+op version
+nvim config.nu
+/mnt/c/Users/jerom/AppData/Local/Microsoft/WinGet/Packages/AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe/op.exe version
+/mnt/c/Users/jerom/AppData/Local/Microsoft/WinGet/Packages/AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe/op.exe --version
+nvim config.nu
+cd
+cd .config/nushell/
+nvim config.nu
+echo $env.SHELL
+echo $env.DEEPSEEK_API_KEY
+nvim .
+op --version
+which op
+op
+$env.DEEPSEEK_API_KEY
+nvim .
+cd lua/
+mv -r auto.lua bindings.lua globals.lua lazy_init.lua plugins/ util/ tipi/
+mv auto.lua bindings.lua globals.lua lazy_init.lua plugins/ util/ tipi/
+ls
+cd tipi
+ls
+lazy_init.lua
+nvim lazy_init.lua
+..
+ls
+..
+ls
+nvim init.lua
+nvim .
+nvim init.lua
+nvim lua/tipi/lazy_init.lua
+cd lua/
+cd tipi/
+ls
+nvim auto.lua
+nvim plugins
+code .
+nvim .
+zed .
+mkdir --help
+mkdir -p
+cd
+cd .config/nushell/
+nvim .
+mkdir -help
+mkdir --help
+mkdir .zed_wsl_server
+..
+nvim /etc/wsl.conf
+sudo nvim /etc/wsl.conf
+exit
+zed .
+sudo nvim /etc/wsl.conf
+zed .
+cd .config/nvim
+nvim .
+cd .config/nvim/
+code .
+nvim .
+dots status
