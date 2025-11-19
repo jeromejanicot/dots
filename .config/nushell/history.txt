@@ -1378,3 +1378,205 @@ cd .config/nvim/
 code .
 nvim .
 dots status
+dots add -u
+dots commit -m "qol, improvement based on lazyvim"
+dots push
+dots push main
+dots -u push
+dots push
+dots push origin
+dots push -u origin
+dots push origin main
+c
+ccd 
+cd 
+ls
+cd nvim .
+cd .config/nvim
+nvim .
+cd
+cd projects/
+ls
+cd jerome_janicot/
+ls
+paru -Syu
+cd projects/jerome_janicot/
+zed .
+git clone git@github.com:moeyua/astro-theme-typography.git .
+ls -a
+rm -rf pnpm-lock.yaml
+proto install bun local --pin
+proto instal bun --pin
+proto install bun --pin
+bun install
+nvim .
+bun dev
+zed .
+paru -Syu
+zed .
+paru -Syu
+cd projects/jerome_janicot/
+zed .
+pnpm dev
+ls
+rm -rf *
+bun create astro@latest
+git init
+ls
+git branch -m Main
+git branch -m main
+zed .
+cd veiled_thread/
+bun astro add astro-seo
+bun add astro-seo
+bun add -D unocss
+bun add @unocss/reset
+cd ..
+cd veiled_thread/
+bun install
+bun add astro-seo
+zed .
+code .
+bun dev
+bun astro dev
+bun add -D sanitzie-html markdown-it dayjs
+bun add -D sanitize-html markdown-it dayjs
+bun add -D @types/markdown-it @types/sanitize-html
+bun add @astrojs/check @astrojs/mdx @astrojs/rss @astrojs/sitemap @swup/astro astro-robots-txt rehype-katex remark-math
+bun dev
+bun add @github/clipboard-copy-element
+bun dev
+bun add -D @unocss/preset-web-fonts
+bun dev
+bun add -D unocss-preset-theme
+pnpm dev
+bun dev
+zed .
+code .
+bun dev
+pnpm add -D typescript tsx
+bun add -D typescript tsx
+bun dev
+cd projects/jerome_janicot/veiled_thread/
+code .
+git status
+git add -u
+git status
+cd ..
+git status
+git add .prototools veiled_thread/
+git commit -m "init writing blog"
+git status
+git add -u
+git commit -m "fixed layout with top image banner and grid"
+cd projects/jerome_janicot/veiled_thread/
+zed .
+bun dev
+..
+git status
+git add -u
+git add veiled_thread/
+git commit -m "tweaked some typographic; need to adjust all section and review spaceing of post cards"
+bun dev
+cd veiled_thread/
+bun dev
+bun add -D @iconify-json/mdi
+bun dev
+..
+git status
+git add -u
+git commit -m "ready to deploy; need to tweak and figure out Font settings etc."
+cd veiled_thread/
+cd ..
+git remote add github git@github.com:jeromejanicot/jerome-janicot.git
+git remote show
+git remote rm origin
+git remote show
+bun dev
+cd ..
+git status
+git commit -m "The Penance Factory"
+git add -u
+git commit -m "The Penance Factory"
+git push github main
+cd
+cd .ssh/
+ls
+nvim config
+ssh electric-owl-prod
+nvim config
+ssh electric-owl-prod
+nvim config
+ssh electric-owl-prod
+nvim config
+ssh electric-owl-prod
+ssh-agent version
+ssh-agent -v
+cd
+cd projects/jerome_janicot/veiled_thread/
+bun build
+zed .
+bun build
+bun run build
+cd ..
+git status
+cd veiled_thread/
+bun run build
+git status
+bun run build
+git status
+git add dist/
+git add -u
+git commit -m "gitignore remove dist for coolify deploy"
+git status
+bun run build
+git status
+git add dist
+git add -f dist
+git commit -m "build file for coolify"
+git push github main
+mkdir training
+cd training/
+zed .
+rm -rf * training/
+ls
+ls -a
+cd projects/
+ls
+mkdir etagere
+cd etagere/
+zed .
+bun create astro@latest
+git init .
+git branch -m main
+ls -a
+cd site-etagere/
+bun add -D @pandacss/dev
+bun panda init --postcss
+bun dev
+bun add -D unocss
+bun add @unocss/reset
+bun add -D @unocss/preset-attribufy
+bun add -D @unocss/preset-attributify
+sudo paru -Syu
+paru -Syu
+cd projects/DataKraft/
+zed .
+paru -Syu
+cd projects/jerome_janicot/
+ls
+git clone git@github.com:crnacura/PlayersClub.git .
+git clone git@github.com:crnacura/PlayersClub.git\
+git clone git@github.com:crnacura/PlayersClub.git
+cd PlayersClub
+zed .
+pnpm install
+pnpm dev
+pnpm upgrade
+pnpm dev
+pnpm install
+nvim .
+pnpm install
+pnpm dev
+zed .
+dots status
